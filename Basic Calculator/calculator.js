@@ -1,7 +1,5 @@
-const http = require('http')
-
-const server = http.createServer((req,res)=>{
-    console.log(req.url ,req.method);
+const requestHandler = (req,res)=>{
+  console.log(req.url ,req.method);
   if(req.url==='/calculator'){
      res.setHeader("Content-Type", "text/html");
     res.write("<html>");
@@ -36,7 +34,7 @@ const server = http.createServer((req,res)=>{
         const sum = Number(jsonObject.num1) + Number(jsonObject.num2)
         console.log(sum); 
     })
-    res.statusCode=302;
+    res.statusCode=302;   //Temporary page for redirect
     res.setHeader('Location','/')
     return res.end();
   }
@@ -49,9 +47,7 @@ const server = http.createServer((req,res)=>{
   res.write("</body>");
   res.write("</html>");
   res.end();
-});
+};
 
-const PORT = 5000;
-server.listen(PORT,()=>{
-    console.log(`Server is running at http://localhost:${PORT}`)
-})
+
+module.exports={requestHandler}
