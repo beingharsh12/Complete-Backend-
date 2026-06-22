@@ -33,7 +33,8 @@ const server = http.createServer((req,res)=>{
         console.log(fullBody)
         const params = new URLSearchParams(fullBody)
         const jsonObject=Object.fromEntries(params)
-        console.log(jsonObject); 
+        const sum = Number(jsonObject.num1) + Number(jsonObject.num2)
+        console.log(sum); 
     })
     res.statusCode=302;
     res.setHeader('Location','/')
