@@ -5,6 +5,8 @@ const userRouter = require('./routes/contactRouter')
 const homeRouter = require('./routes/homeRouter')
 const path = require('path')
 
+const rootDir = require('./utils/path')
+
 
 
 app.use((req,res,next)=>{
@@ -19,7 +21,7 @@ app.use(userRouter);
 app.use(homeRouter);
 
 app.use((req,res) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', 'error.html'));
+    res.status(404).sendFile(path.join(rootDir, 'views', 'error.html'));
 });
 
 
