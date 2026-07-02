@@ -11,7 +11,9 @@ app.use((req,res,next)=>{
 })
 app.get('/', (req,res,next)=>{
     console.log("handling / request for GET",req.url, req.method)
-    res.send('<h1>Welcome to the Express.js Learnng series...')
+    res.send(`<h1>Welcome to the Express.js Learnng series...</h1>
+        <a href="/contact-us">Contact Us</a>
+        `)
 })
 app.get('/contact-us', (req,res,next)=>{
     console.log("Second middleware",req.url)
