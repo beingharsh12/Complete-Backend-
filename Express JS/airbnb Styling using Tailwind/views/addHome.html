@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add-Home</title>
+    <link rel="stylesheet" href="/output.css">
 </head>
 <body>
-     <h1>Enter the details</h1>
+     <h1 class="text-2xl font-bold text-red-600">Enter the details</h1>
         <form action="/host/add-home" method="POST">
-            <label for="title">House Name:</label>
-            <input type="text" id="title" name="HouseName" required>
+            <label for="title" >House Name:</label>
+            <input type="text" id="title" name="HouseName" class="border border-gray-300 rounded px-4 py-2" required>
             <br><br>
-            <button type="submit">Add Home</button>
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Add Home</button>
         </form>
 </body>
 </html>
