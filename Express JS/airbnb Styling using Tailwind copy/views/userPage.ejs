@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>airbnb Home</title>
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <link rel="stylesheet" href="/output.css">
+</head>
+<body>
+      <h1 class="text-3xl font-bold text-red-500">Welcome to the airbnb EJS</h1>
+      <a class="border rounded border-green-500 text-black hover:bg-green-500 m-4 hover:text-white p-1" href="/host/add-home">Add Home</a>
+      <h2 class="text-2xl font-bold text-gray-800">Registered Homes</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <% homes.forEach(home => { %>
+            <div class="border border-gray-300 rounded p-4">
+                <h2 class="text-xl font-semibold"><%= home.houseName %></h2>
+            </div>
+        <% }) %>
+</body>
+</html>
