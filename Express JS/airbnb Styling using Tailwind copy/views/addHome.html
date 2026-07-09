@@ -8,9 +8,16 @@
 </head>
 <body>
      
+      <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-white text-lg font-semibold">Home</a>
+            <div>
+                <a href="/host/add-home" class="text-white mr-4">Add Home</a>
+            </div>
+            </nav>
       <h1 class="text-2xl font-bold text-red-600">Enter the details</h1>
         <form action="/host/add-home" method="POST">
-            <label for="title" >House Name:</label>
+            <label for="title" class="block text-gray-700 font-bold mb-2">House Name:</label>
             <input type="text" id="title" name="houseName" class="border border-gray-300 rounded px-4 py-2" required>
             <br><br>
             <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Add Home</button>

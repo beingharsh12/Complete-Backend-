@@ -8,7 +8,7 @@ hostRouter.get('/add-home', (req,res,next) => {
     // res.sendFile(path.join(__dirname, '../','views','addHome.html'));
        res.sendFile(path.join(rootDir, 'views', 'addHome.html'));
 });
-
+    
 const homes = [];
 hostRouter.post('/add-home', (req,res,next) => {
     homes.push({houseName: req.body.houseName});
