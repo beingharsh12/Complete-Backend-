@@ -3,18 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add-Home</title>
+    <title><%- pageTitle %></title>
     <link rel="stylesheet" href="/output.css">
 </head>
 <body>
      
-      <nav class="bg-gray-800 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="/" class="text-white text-lg font-semibold">Home</a>
-            <div>
-                <a href="/host/add-home" class="text-white mr-4">Add Home</a>
-            </div>
-            </nav>
+     <%- include('partials/nav') %>
       <h1 class="text-2xl font-bold text-red-600">Enter the details</h1>
         <form action="/host/add-home" method="POST">
             <label for="title" class="block text-gray-700 font-bold mb-2">House Name:</label>

@@ -6,7 +6,7 @@ const homes = require('./hostRouter').homes;
 const userRouter = express.Router();
 
 userRouter.get('/', (req,res,next) => {
-    res.render('userPage', { homes });
+    res.render('userPage', { homes, pageTitle: 'User Page', path: '/user'});
 });
 
 module.exports = userRouter;
