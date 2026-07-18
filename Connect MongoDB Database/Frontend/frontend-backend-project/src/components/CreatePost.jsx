@@ -19,15 +19,14 @@ axios.post('http://localhost:3000/notes',data)
 
 }
   return (
-    <div>
-        <form onSubmit={handleSubmit}>
-            <input type="text" name='title' placeholder='enter name' />
-            <input type="text" name='description' placeholder="enter caption" />
-            <button type='submit'>Submit</button>
-            
-        </form>
-    </div>
-  )
+  <>
+    <form onSubmit={handleSubmit}>
+      <input type="text" name="title" placeholder="enter name" />
+      <input type="text" name="description" placeholder="enter caption" />
+      <button type="submit">Submit</button>
+    </form>
+  </>
+);
 }
 
 export default CreatePost

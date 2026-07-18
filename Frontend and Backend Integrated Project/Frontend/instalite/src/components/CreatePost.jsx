@@ -22,6 +22,8 @@ axios.post('http://localhost:3000/data',formData)
             <button type='submit'>Submit</button>
             
         </form>
+
+        <a href="/feed">See posts</a>
     </div>
   )
 }

@@ -31,6 +31,9 @@ const Feed = () => {
             :
             <h1>No post found</h1>
         }
+        <div>
+            <a href="/">Create New Post</a>
+        </div>
     </div>
   
 )}
