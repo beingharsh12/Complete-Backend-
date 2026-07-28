@@ -20,22 +20,25 @@ const Feed = () => {
   fetchData();
 }, []);
     return (
-    <div>
+        <section>
+    <div className='flex flex-wrap gap-5'>
         {
             post.length>0 ? post.map((obj)=>(
-                <div key={obj._id}>
-                   <img style={{height:'200px'}} src={obj.image} alt={obj.caption} />
-                    <h1>{obj.caption}</h1>
+                <div key={obj._id} className='h-150 w-100 border rounded flex flex-col items-center'>
+                    <div className='h-120 w-auto'>
+                      <img src={obj.image} alt={obj.caption} className='h-full w-auto'/>
+                    </div>
+                    <h1 className='pt-5'>{obj.caption}</h1>
                 </div>
             ))
             :
             <h1>No post found</h1>
         }
         <div>
-            <a href="/">Create New Post</a>
         </div>
     </div>
-  
+            <a href="/" className='text-blue-500 hover:underline'>Create New Post</a>
+     </section>
 )}
 
 export default Feed
