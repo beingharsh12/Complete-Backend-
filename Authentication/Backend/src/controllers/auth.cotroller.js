@@ -6,6 +6,18 @@
     const user = await userModel.create({
         username, email, password
     })  
+
+    const isUserAlreadyExist = await userModel.findOne(
+        {
+            email
+        }
+    )
+    if(isUserAlreadyExist){
+        return res.status(409).json({
+            message:"User already exist.."
+        })
+    }
+
     const token = jwt.sign({
         id:user._id
     }, process.env.JWT_SECRET)
