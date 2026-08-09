@@ -18,7 +18,7 @@ app.post('/data', upload.single('image'), async (req, res)=>{
     console.log(req.body)
     console.log(req.file)
     
-    const result = await uploadFile(req.file.buffer)  //Buffer se URL create krke dega using ImageKit 
+    const result = await uploadFile(req.file.buffer) //Buffer se URL create krke dega using ImageKit 
         await postModel.create({
         image:result.url,
         caption:req.body.caption
