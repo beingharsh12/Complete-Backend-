@@ -10,7 +10,7 @@ router.post('/register',authController.registerUser)
 //     console.log('Cookies:', req.cookies)
 //     res.json({
 //         message:"test Route",
-//         cookies:req.cookies
+//         cookies:req.cookies  
 //     })
 // })
 
