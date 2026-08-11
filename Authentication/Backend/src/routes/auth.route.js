@@ -4,7 +4,8 @@ const authController = require('../controllers/auth.cotroller')
 const router = express.Router()
 
 // method:POST, Path: /api/auth/register
-router.post('/register',authController.registerUser)   
+router.post('/register',authController.registerUser) 
+  
 
 // router.get('/test', (req,res)=>{
 //     console.log('Cookies:', req.cookies)

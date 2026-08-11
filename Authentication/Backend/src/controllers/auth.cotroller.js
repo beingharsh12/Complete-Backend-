@@ -19,7 +19,7 @@ const registerUser = async (req, res) => {
     });
 
     /*
-    Jab bhi koi user server ko request bhejta hai, toh server us user ko identify 
+    Jab bhi koi user server ko request bhejta hai, toh server uss user ko identify 
     karne ke liye ek unique token generate karta hai. 
     Ye token user ke identity ko verify karne ke liye use hota hai.
     Or phir server ye token ko user ke browser me cookie ke form me bhejta hai.
