@@ -5,13 +5,10 @@ const multer = require('multer')
 const uploadFile = require('./services/storage.service')
 const cors = require('cors')
 
-
-
 app.use(cors())
-app.use(express.json());
+app.use(express.json()); 
 
 const upload = multer({storage:multer.memoryStorage()})
-
 
 app.post('/data', upload.single('image'), async (req, res)=>{
 
@@ -23,17 +20,15 @@ app.post('/data', upload.single('image'), async (req, res)=>{
         image:result.url,
         caption:req.body.caption
     })
-     res.status(201).json({ message: "Data added successfully.."
-     });
+     res.status(201).json({ message: "Data added successfully.."});
 })
 
 app.get('/data', async (req,res)=>{
     const data = await postModel.find();
      res.status(200).json({
-    message: "Data fetched succesfully..",
+    message: "Data fetched succesfully..",  
     data: data
   });
-
 
 })
 
@@ -45,7 +40,6 @@ app.delete('/data/:id', async (req,res)=>{
       res.status(200).json({
         message: "Note deleted successfully..",
       });
-    
 } )
 
 

@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     password:String
-})
+})  
 
 const userModel = mongoose.model('user', userSchema)
 
