@@ -1,5 +1,7 @@
 const userModel = require("../models/user.model");
 const jwt = require("jsonwebtoken"); //JWT is commonly used to create a token that identifies an authenticated user.
+
+
 const registerUser = async (req, res) => {
   try {
     const { username, email, password } = req.body;
