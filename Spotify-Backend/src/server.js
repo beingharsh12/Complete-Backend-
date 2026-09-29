@@ -1,11 +1,14 @@
-require("dotenv").config({
-    path: "../.env"
-});
-const app  = require('./app');
-const connectDB = require('./db/db');
+const path = require("path");
 
-// Connect to MongoDB
+require("dotenv").config({
+    path: path.resolve(__dirname, "../.env")
+});
+
+const app = require("./app");
+const connectDB = require("./db/db");
+
 connectDB();
+
 app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+    console.log("Server is running on port 3000");
 });

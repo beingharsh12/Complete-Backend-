@@ -25,8 +25,8 @@ const registerUser = async (req, res) => {
         role
     });
 
-    await user.save();
-    
+    await user.save();  // MogoDB me data save karega
+
     const token = jwt.sign({ 
         id: user._id, 
         role: user.role 
@@ -48,7 +48,7 @@ const registerUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
     const { username, email, password } = req.body;
-    const user = await userModel.findOne({
+    const user = await userModel.findOne({  
         $or:[
             { username },
             { email }        // koi  ek sahi hoga or dusra Undefined rhega
@@ -61,6 +61,8 @@ const loginUser = async (req, res) => {
     }
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    
     if(!isPasswordValid){
         return res.status(401).json({
             message: 'Invalid credentials'
